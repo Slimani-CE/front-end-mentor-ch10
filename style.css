@@ -1,0 +1,298 @@
+:root {
+    /* Primary Colors */
+    --Tomato: hsl(4, 100%, 67%);
+    --Tomato-bg: hsla(4, 100%, 67%, 0.2);
+
+    /* Neutral Colors */
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--charcoal-grey);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    color: var(--white);
+}
+
+.attribution a {
+    color: var(--white);
+}
+
+.container {
+    width: 940px;
+    height: 640px;
+    background-color: var(--white);
+    border-radius: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px;
+}
+
+.card-img {
+    height: 100%;
+    width: 400px;
+    background-image: url("assets/images/illustration-sign-up-desktop.svg");
+}
+
+.container .card-content {
+    width: calc(100% - 400px);
+    height: 100%;
+    padding: 60px 80px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container .card-content .title {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--dark-slate-grey);
+}
+
+.container .card-content .detail {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    color: var(--charcoal-grey);
+    margin-top: 20px;
+}
+
+.container .card-content .features {
+    list-style-type: none;
+}
+
+.container .card-content .features .feature {
+    display: flex;
+    margin-top: 15px;
+}
+
+.container .card-content .features .feature span {
+    color: var(--charcoal-grey);
+}
+
+.container .card-content .features .feature img {
+    margin-right: 10px;
+}
+
+.container .card-content form {
+    width: 100%;
+}
+
+.container .card-content .email-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    position: relative;
+}
+
+.container .card-content .email-body .error-email-msg {
+    display: none;
+}
+
+.container .card-content .email-body label,
+.container .card-content .invalid-email .error-email-msg {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--dark-slate-grey);
+}
+
+.container .card-content .invalid-email .error-email-msg {
+    position: absolute;
+    color: var(--Tomato);
+    right: 0;
+    display: block;
+}
+
+.container .card-content .email-body input {
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--grey);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.container .card-content .email-body input::placeholder {
+    color: var(--grey);
+}
+
+.container .card-content .email-body input:focus {
+    border: 2px solid var(--grey);
+    color: var(--dark-slate-grey);
+}
+
+.invalid-email input{
+    border: 1px solid var(--Tomato) !important;
+    color: var(--Tomato);
+    background-color: var(--Tomato-bg);
+}
+
+.invalid-email input:focus {
+    border: 2px solid var(--Tomato);
+    color: var(--Tomato) !important;
+    background-color: var(--Tomato-bg);
+}
+
+.container .card-content .email-submit-btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.container .card-content .email-submit-btn:hover {
+    background-image: linear-gradient(to right, hsl(-10, 100%, 67%), var(--Tomato));
+    box-shadow: 0px 3px 5px 0px var(--Tomato);
+}
+
+.thank-card {
+    width: 330px;
+    height: 330px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thank-card .card-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.thank-card .card-icon img {
+    width: 100%;
+}
+
+.thank-card .title {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--dark-slate-grey);
+}
+
+.thank-card .details {
+    font-size: 10px;
+    color: var(--dark-slate-grey);
+}
+
+.thank-card .details span {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.thank-card .dismiss-btn {
+    height: 40px;
+    border: none;
+    background-color: var(--dark-slate-grey);
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.thank-card .dismiss-btn:hover {
+    background-image: linear-gradient(to right, hsl(-10, 100%, 67%), var(--Tomato));
+    box-shadow: 0px 3px 5px 0px var(--Tomato);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@media (max-width: 740px) {
+    body {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .attribution {
+        position: static;
+        margin: 20px 0;
+    }
+
+    .container {
+        width: 375px;
+        height: auto;
+        padding: 0;
+        flex-direction: column-reverse;
+        border-radius: 0px;
+    }
+
+    .container .card-img {
+        width: 375px;
+        height: 284px;
+        background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    }
+
+    .container .card-content {
+        height: auto;
+        width: 100%;
+        padding: 40px 30px;
+    }
+
+    .container .card-content .title {
+        font-size: 40px;
+    }
+
+    .container .card-content .features .feature {
+        /* display: flex; */
+        margin-top: 15px;
+    }
+
+    .thank-card {
+        height: 100vh;
+        width: 100%;
+        padding: 100px 30px;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .thank-card .title {
+        margin-top: 50px;
+    }
+
+    .thank-card .details {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .thank-card .details span {
+        font-size: 16px;
+    }
+
+    .thank-card .dismiss-btn {
+        position: absolute;
+        bottom: 40px;
+        width: calc(100% - 60px);
+    }
+}
